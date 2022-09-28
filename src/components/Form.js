@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import { nanoid } from 'nanoid'
 
 function Form({addPerson}) {
 
@@ -26,6 +27,7 @@ function Form({addPerson}) {
     const handleSubmit = (e) => {
         e.preventDefault();
         const newPerson = {
+            id: nanoid(),
             firstName,
             lastName,
             address,

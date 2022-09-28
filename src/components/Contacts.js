@@ -1,23 +1,21 @@
 
-
-
-// function Contacts({items}){
-//     const contactList = items.map(({firstName, lastName, address, phoneNumber}) => (
-//     <li class="img-box">
-//         <p>{firstName}</p>
-//         <p>{lastName}</p>
-//         <p>{address}</p>
-//         <p>{phoneNumber}</p>
-//     </li>
-//     ));
+function Contacts({person}){
+    const contactList = person.map(({id, firstName, lastName, address, phoneNumber}) => (
+    <li key={id}>
+        <p>{firstName}</p>
+        <p>{lastName}</p>
+        <p>{address}</p>
+        <p>{phoneNumber}</p>
+    </li>
+    ));
  
-//     return(
-//       <div class="pic-list"> 
-//         <ul class="list">
-//           {contactList}
-//         </ul>
-//       </div>
-//     )
-// };
+    return(
+      <div> 
+        <ul>
+          {contactList}
+        </ul>
+      </div>
+    )
+};
 
-// export default Contacts;
+export default Contacts;
