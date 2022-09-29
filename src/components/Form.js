@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import { nanoid } from 'nanoid'
 
 function Form({addPerson}) {
@@ -41,13 +41,17 @@ function Form({addPerson}) {
     };
 
     return(
-        <form>
+        <form class="form">
             <label htmlFor=""></label>
-            <input value={firstName} type='firstName' name='firstName' placeholder="First Name" autoComplete='off' onChange={handleFirstName}></input>
-            <input value={lastName} type='lastName' name='lastName' placeholder="Last Name" autoComplete='off' onChange={handleLastName}></input>
-            <input value={address} type='address' name='address' placeholder="Address" autoComplete='off' onChange={handleAddress}></input>
-            <input value={phoneNumber} type='phoneNumber' name='phoneNumber' placeholder="Phone Number" autoComplete='off' onChange={handlePhoneNumber}></input>
-            <button type="submit" name='saveButton' onClick={handleSubmit}>Submit</button>
+            <div class="name-inputs">
+                <input class="first-name" value={firstName} type='firstName' name='firstName' placeholder="First Name" autoComplete='off' onChange={handleFirstName}></input>
+                <input class="last-name" value={lastName} type='lastName' name='lastName' placeholder="Last Name" autoComplete='off' onChange={handleLastName}></input>
+            </div>  
+            <input class="address" value={address} type='address' name='address' placeholder="Address" autoComplete='off' onChange={handleAddress}></input>
+            <input class="phone-number" value={phoneNumber} type='phoneNumber' name='phoneNumber' placeholder="Phone Number" autoComplete='off' onChange={handlePhoneNumber}></input>
+            <div class="button">
+                <button type="submit" name='submitButton' onClick={handleSubmit}>Submit</button>
+            </div>
         </form>
         )
     };

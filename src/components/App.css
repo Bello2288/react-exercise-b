@@ -2,37 +2,98 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #7a9cdc;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  width: 100%;
+  max-width: 700px;
+  border: 2px solid black;
+  padding: 10px;
+  margin-top: 25px;
+  background-color: #d2c8c8;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.name-inputs {
+  display: flex;
+  margin-bottom: 5px;
+}
+.first-name {
+  width: 40%;
+  height: 25px;
+}
+.last-name {
+  width: 60%;
+  height: 25px;
+}
+
+.address {
+  width: 98.8%;
+  height: 25px;
+  margin-bottom: 5px;
+}
+.phone-number  {
+  width: 98.8%;
+  height: 25px;
+  margin-bottom: 5px;
+}
+button {
+  width: 30%;
+  height: 25px;
+  background-color: #df8723;
+  color: #ffffff;
+}
+
+.contact-box {
+    background-color: #ffffff;
+    padding: 0 8px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border: 1px solid rgb(9, 4, 4);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+p {
+  margin: 5px 0;
+}
+.list {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #7a9cdc;
+  padding-top: 40px;
+}
+.list-items {
+  list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 40%;
+  background-color: #d2c8c8;
+  margin: 0;
+  padding: 20px 0 0 0;
+  border: 2px solid rgb(0, 0, 0);
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* -------------------------------------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+  .list-items {
+    width: 60%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .form {
+    width: 90%;
   }
 }

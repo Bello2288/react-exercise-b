@@ -1,17 +1,16 @@
 
 function Contacts({person}){
     const contactList = person.map(({id, firstName, lastName, address, phoneNumber}) => (
-    <li key={id}>
-        <p>{firstName}</p>
-        <p>{lastName}</p>
+    <li key={id} class="contact-box">
+        <p>{firstName} {lastName}</p>
         <p>{address}</p>
         <p>{phoneNumber}</p>
     </li>
     ));
  
     return(
-      <div> 
-        <ul>
+      <div class="list">
+        <ul class="list-items">Contact List 
           {contactList}
         </ul>
       </div>
